@@ -99,7 +99,8 @@
       <a href="#">Dashboard</a>
       <a href="#">Create Group</a>
       <a href="#">Join Group</a>
-      <a href="login.html">${username}</a>
+      <a href="#" id="userLink">Sign In</a>
+      <a href="login.html" onclick="localStorage.removeItem('Username')">Sign Out</a>
     </div>
   </nav>
 
@@ -109,5 +110,18 @@
       Connect with your peers and organize travel plans easily. Create or join groups, share details, and make your college journeys hassle-free!
     </p>
   </div>
+
+
+  <script>
+    const username = localStorage.getItem("Username");
+
+    if (username) {
+      document.getElementById("userLink").textContent = username;
+    } else {
+      window.location.href = "login.html";
+    }
+  </script>
+
+
 </body>
 </html>
