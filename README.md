@@ -1,1 +1,1 @@
-hosted at nitrhackathon.netlify.app
+hosted at nitrhackathon.onrender.com
